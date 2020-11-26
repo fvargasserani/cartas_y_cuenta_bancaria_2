@@ -28,13 +28,14 @@ class Usuario
         n.times do |i|
             saldo_final += cuentas_bancarias[i].saldo
         end
-        print "El saldo de todas las cuentas bancarias es de $#{saldo_final}"
+        print "El saldo de todas las cuentas bancarias de #{nombre} es de $#{saldo_final}"
     end
 end
 
 cuenta1 = CuentaBancaria.new('Santander', '12345678', 5000)
 cuenta2 = CuentaBancaria.new('Santander', '87654321', 0)
 puts cuenta1.transferir(cuenta2,5000)
+puts "La cuenta numero #{cuenta2.numero_cuenta} tiene un saldo de $#{cuenta2.saldo}"
 
 usuario1 = Usuario.new('Francisca', [cuenta1,cuenta2])
 puts usuario1.saldo_total
