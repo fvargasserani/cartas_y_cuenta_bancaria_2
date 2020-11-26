@@ -17,7 +17,7 @@ end
 class Usuario
     attr_accessor :nombre, :cuentas_bancarias
     def initialize(nombre, cuentas_bancarias)
-        raise ArgumentError, 'Debe ingresar al menos un numero de cuenta bancaria' if cuentas_bancarias == []
+        raise ArgumentError, 'Debe ingresar al menos una cuenta bancaria' if cuentas_bancarias == []
         @nombre = nombre
         @cuentas_bancarias = cuentas_bancarias
     end
