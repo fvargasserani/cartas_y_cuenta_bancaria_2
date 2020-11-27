@@ -21,8 +21,7 @@ class Baraja
     end
     
     def sacar
-        todas_cartas.pop(0)
-        print todas_cartas
+        print todas_cartas.pop(1)
     end
     
     def repartir_mano
@@ -34,7 +33,7 @@ cartas = Carta.new([*1..13],['C', 'D', 'E', 'T'])
 todas_cartas = cartas.combinaciones
 mazo = Baraja.new(todas_cartas)
 
-print cartas.combinaciones
-print mazo.barajar
+cartas.combinaciones
+#print mazo.barajar
 print mazo.sacar
-print mazo.repartir_mano
+#print mazo.repartir_mano
