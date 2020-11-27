@@ -11,30 +11,29 @@ class Carta
 end
 
 class Baraja
-    attr_accessor :cartas
-    def initialize(cartas)
-        @cartas = cartas
+    attr_accessor :todas_cartas
+    def initialize(todas_cartas)
+        @todas_cartas = todas_cartas
     end
 
-    def barajar(cartas)
-        cartas.shuffle
+    def barajar
+        todas_cartas.shuffle
     end
     
-    def sacar(cartas)
-        cartas.pop(0)
-        print cartas
+    def sacar
+        todas_cartas.pop(0)
     end
     
-    def repartir_mano(cartas)
-        cartas[0..4]
+    def repartir_mano
+        todas_cartas[0..4]
     end
 end
 
 cartas = Carta.new([*1..13],['C', 'D', 'E', 'T'])
 todas_cartas = cartas.combinaciones
-mazo = Baraja.new(cartas)
+mazo = Baraja.new(todas_cartas)
 
 print cartas.combinaciones
-print mazo.barajar(todas_cartas)
-print mazo.sacar(todas_cartas)
-print mazo.repartir_mano(todas_cartas)
+print mazo.barajar
+print mazo.sacar
+print mazo.repartir_mano
