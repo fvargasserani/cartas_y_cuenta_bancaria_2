@@ -22,6 +22,7 @@ class Baraja
     
     def sacar
         todas_cartas.pop(0)
+        print todas_cartas
     end
     
     def repartir_mano
