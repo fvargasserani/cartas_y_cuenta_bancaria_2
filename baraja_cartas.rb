@@ -21,7 +21,7 @@ class Baraja
     end
     
     def sacar
-        print todas_cartas.pop(1)
+        print todas_cartas.shift #El metodo shift funciona para sacar la primera carta de un arreglo. El metodo pop para sacar la ultima carta.
     end
     
     def repartir_mano
