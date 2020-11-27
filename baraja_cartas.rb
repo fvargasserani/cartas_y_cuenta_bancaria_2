@@ -34,6 +34,6 @@ todas_cartas = cartas.combinaciones
 mazo = Baraja.new(todas_cartas)
 
 cartas.combinaciones
-#print mazo.barajar
+print mazo.barajar
 print mazo.sacar
-#print mazo.repartir_mano
+print mazo.repartir_mano
